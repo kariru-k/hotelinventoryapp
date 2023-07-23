@@ -1,5 +1,14 @@
+<!-- One-way binding (String interpolation) -->
 <h1>Welcome to {{hotelName}}</h1>
 
-<div [innerText]="numberOfRooms">
 
+<div [hidden]="hideRooms">
+  Number of Rooms:
+  <!-- One-way binding (Property Binding) -->
+  <div [innerText]="numberOfRooms"></div>
 </div>
+
+<!-- Two-way binding (Event Binding) -->
+<!-- Clicking this button will hide the div showing rooms -->
+<button (click)="toggle()">Toggle</button>
+
